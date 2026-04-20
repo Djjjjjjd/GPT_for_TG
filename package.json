@@ -1,0 +1,33 @@
+{
+  "name": "telegram-gpt-assistant-bot",
+  "version": "1.0.0",
+  "description": "Production-ready Telegram GPT assistant bot with OpenAI API, Express webhook, PM2 and Nginx support.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "pm2:start": "pm2 start ecosystem.config.cjs",
+    "pm2:restart": "pm2 restart telegram-gpt-assistant-bot",
+    "pm2:logs": "pm2 logs telegram-gpt-assistant-bot"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "openai",
+    "gpt",
+    "express",
+    "webhook",
+    "pm2"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "openai": "^6.0.0"
+  }
+}
